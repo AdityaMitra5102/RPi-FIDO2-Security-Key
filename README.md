@@ -28,11 +28,19 @@ sudo apt-get install git
 git clone <Repository URL>
 ```
 
+```
+git clone https://github.com/AdityaMitra5102/RPi-FIDO2-Security-Key.git
+```
+
 4. Go into the folder
 
     Use `cd` to go into the folder you just cloned
 
-5. Make installer executable
+   ```
+   cd RPi-FIDO2-Security-Key
+   ```
+
+6. Make installer executable
 ```
 sudo chmod +x installer.sh
 ```
