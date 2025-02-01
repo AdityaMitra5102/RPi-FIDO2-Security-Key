@@ -1,13 +1,13 @@
 # Raspberry Pi FIDO2 Key
-## This projects converts a RPi 5 or RPi Zero/ Zero 2 W to a FIDO2 Security Key
+## This project converts an RPi 5 or RPi Zero/ Zero 2 W to a FIDO2 Security Key
 
 ![Banner](image.png)
 
 ### ⚠️ DO NOT USE THIS IN PRODUCTION, THE CRYPTOGRAPHIC KEYS ARE STORED IN CLEARTEXT
 
-For visual outputs, connect a LED to `GPIO 16`.
+For visual outputs, connect an LED to `GPIO 16`.
 
-Install Raspberry Pi OS Lite on the Raspberry Pi. (Lite is preffered for faster boot time).
+Install Raspberry Pi OS Lite on the Raspberry Pi. (Lite is preferred for faster boot time).
 
 You should be able to access the RPi Terminal with a keyboard + screen or via SSH.
 
@@ -40,7 +40,7 @@ git clone https://github.com/AdityaMitra5102/RPi-FIDO2-Security-Key.git
    cd RPi-FIDO2-Security-Key
    ```
 
-6. Make installer executable
+6. Make the installer executable
 ```
 sudo chmod +x installer.sh
 ```
