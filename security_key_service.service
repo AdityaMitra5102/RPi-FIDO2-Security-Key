@@ -1,0 +1,17 @@
+[Unit]
+Description=Use FIDO Key
+After=network-online.target
+Wants=network-online.target
+#After=systemd-modules-load.service
+  
+[Service]
+Type=simple
+ExecStart=/usr/bin/security_key.py
+Restart=always
+User=root
+WorkingDirectory=/etc/fido2_security_key
+StandardOutput=journal
+StandardError=journal
+  
+[Install]
+WantedBy=sysinit.target

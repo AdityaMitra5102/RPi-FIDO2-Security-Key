@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo journalctl -f -u security_key_service.service

@@ -1,0 +1,13 @@
+[Unit]
+Description=Initialize FIDO Key
+After=network-online.target
+Wants=network-online.target
+#After=systemd-modules-load.service
+  
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/ctap_init
+  
+[Install]
+WantedBy=sysinit.target
