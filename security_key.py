@@ -176,7 +176,7 @@ def authenticatorGetInfo():
     authenticatorInfo[2]=['credProtect']
     authenticatorInfo[3]=uuid.UUID(aaguid_str).bytes
     options={}
-    options['rk']=False
+    options['rk']=True
     options['plat']=False
     options['up']=True
     options['clientPin']=False
