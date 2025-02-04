@@ -320,7 +320,11 @@ def authenticatorGetNextAssertion():
     assertptr=assertptr+1
     return sig, 0
 
-
+import os
+def authenticatorReset():
+    os.remove(file_path)
+    full_data={}
+    return '',0
 
 ############################## CTAP2 #########################################
 full_data={}
@@ -340,6 +344,8 @@ def CTAPHID_CBOR(channel, payload):
         reply_payload, success=authenticatorGetAssertion(cbor2.loads(cbor_payload))
     if cbor_command==0x08:
         reply_payload, success=authenticatorGetNextAssertion()
+    if cbor_command==0x07:
+        reply_payload, success=authenticatorReset()
 
     if success==0:
         reply=(0).to_bytes(1,'big')
