@@ -179,7 +179,6 @@ def authenticatorGetInfo():
     options['rk']=True
     options['plat']=False
     options['up']=True
-    options['clientPin']=False
     options['uv']=True
     authenticatorInfo[4]=options
     authenticatorInfo[5]=1200
