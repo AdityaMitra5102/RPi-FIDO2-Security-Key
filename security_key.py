@@ -492,8 +492,14 @@ def process_packet(packet):
         payload=packet[5:]
     
     seqnum=seqnum+3
-    full_data[cstr][seqnum]=payload
-    process_transcation(channel)
+    try:
+        full_data[cstr][seqnum]=payload
+    except:
+        pass
+    try:
+        process_transcation(channel)
+    except:
+        CTAPHID_ERROR(channel)
 
 
 
